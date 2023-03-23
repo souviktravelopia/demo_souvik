@@ -1,0 +1,21 @@
+name: Docker Image auto
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build and push
+      run: |
+        docker run . --file Dockerfile --no-cache --tag test_container
+#        docker run test_container:latest
