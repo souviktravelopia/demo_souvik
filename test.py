@@ -10,3 +10,4 @@ def send_to_telegram(msg):
 text = f'I ran on - {datetime.now()}'
 
 send_to_telegram(msg=text)
+

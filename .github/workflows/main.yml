@@ -1,15 +1,15 @@
 name: Docker Image auto
 
-#on:
-#  push:
-#    branches: [ "main" ]
-#  pull_request:
-#    branches: [ "main" ]
-
 on:
-  schedule:
-    - cron: "30 6 * * *"
-  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+#on:
+#  schedule:
+#    - cron: "30 6 * * *"
+#  workflow_dispatch:
 
 jobs:
   deploy:
